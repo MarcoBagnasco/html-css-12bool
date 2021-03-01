@@ -23,6 +23,10 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+[class*="col-"].padding-0{
+    padding-left: 0;
+    padding-right: 0;
+}
 
 .col-1{
     width: calc(100% / 12);
