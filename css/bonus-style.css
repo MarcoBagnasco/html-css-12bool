@@ -31,18 +31,17 @@ main{
 
 /* Window Game */
 .window-game{
-    height:900px; /* fake content */
-    padding: 10px 0;
+    /* height:900px; fake content */
+    /* padding: 10px 0; */
     border: 2px solid blue;
 }
 /* Boxes */
 .box{
     position: relative;
-    height: 66.33px;
+    height: 66.7px;
     padding: 0;
     text-align: center;
-    line-height: 66.33px;
-
+    line-height: 66.7px;
 }
 .box.char,
 .box.number{
@@ -53,7 +52,8 @@ main{
 }
 .box.sea,
 .box.ship,
-.box.miss{
+.box.miss,
+.box.hit{
     background-color: aqua;
     border: 1px solid black;
 }
@@ -71,6 +71,9 @@ main{
     font-size: 48px;
     color: red;
 }
+.box.hit img{
+    width: 100%;
+}
 /* Ships */
 .box.ship::before{
     content: '';
@@ -86,6 +89,14 @@ main{
 .ship.ship-head::before{
     border-radius: 50% 50% 0 0;
 }
+.ship.ship-tail::before{
+    border-radius: 0 0 50% 50%;
+}
 .ship.ship-single::before{
     border-radius: 50%;
+}
+/* Ships Rotation */
+.ship-head.horizontal,
+.ship-tail.horizontal{
+    transform: rotate(-90deg);
 }
