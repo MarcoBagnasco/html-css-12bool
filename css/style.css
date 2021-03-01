@@ -1,0 +1,10 @@
+/* GENERAL */
+body{
+    padding: 3rem;
+    font-size: 20px;
+    background-color: #ccc;
+}
+h1,
+h2{
+    text-align: center;
+}
