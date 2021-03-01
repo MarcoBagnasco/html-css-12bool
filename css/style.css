@@ -6,5 +6,14 @@ body{
 }
 h1,
 h2{
+    margin-bottom: 2rem;
     text-align: center;
+}
+
+/* FAKE CONTENT */
+.box{
+    padding: .5rem;
+    text-align: center;
+    background-color: aqua;
+    border: 1px solid black;
 }
