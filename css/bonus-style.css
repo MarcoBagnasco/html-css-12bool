@@ -1,7 +1,10 @@
 /* GENERAL */
+body{
+    font-family: 'Press Start 2P', cursive;
+}
 h1{
     text-align: center;
-    font-family: 'Press Start 2P', cursive;
+    /* font-family: 'Press Start 2P', cursive; */
     font-size: 48px;
 }
 
@@ -34,6 +37,7 @@ main{
 }
 /* Boxes */
 .box{
+    position: relative;
     height: 66.33px;
     padding: 0;
     text-align: center;
@@ -42,12 +46,13 @@ main{
 }
 .box.char,
 .box.number{
-    font-size: 20px;
+    font-size: 16px;
 }
 .box.char{
     text-transform: uppercase;
 }
 .box.sea,
+.box.ship,
 .box.miss{
     background-color: aqua;
     border: 1px solid black;
@@ -65,4 +70,22 @@ main{
     font-weight: 900;
     font-size: 48px;
     color: red;
+}
+/* Ships */
+.box.ship::before{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+}
+.ship.ship-head::before{
+    border-radius: 50% 50% 0 0;
+}
+.ship.ship-single::before{
+    border-radius: 50%;
 }
