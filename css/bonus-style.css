@@ -78,8 +78,7 @@ main{
 }
 .box.sea,
 .box.ship,
-.box.miss,
-.box.hit{
+.box.miss{
     background-color: aqua;
     border: 1px solid black;
 }
@@ -97,9 +96,46 @@ main{
     font-size: 48px;
     color: red;
 }
+/* Hit Animation */
+.box.sea.hit::before{
+    position: absolute;
+    left: 5px;
+    animation: disappear 6s infinite; 
+}
+@keyframes disappear {
+    from, 32%{
+        opacity: 1;
+    }
+    33%, to{
+        opacity: 0;
+    }
+}
 .box.hit img{
     width: 100%;
+    opacity: 0;
+    animation: appear 6s infinite,
+               scale 6s infinite;
 }
+@keyframes appear {
+    from, 32%{
+        opacity: 0;
+    }
+    33%, to{
+        opacity: 1;
+    }
+}
+@keyframes scale{
+  from, 32%{
+      transform: scale(.5)
+  }
+  60%{
+    transform: scale(1.5)
+  }
+  85%, to{
+    transform: scale(1)
+  }
+}
+
 /* Ships */
 .box.ship::before{
     content: '';
@@ -143,7 +179,7 @@ main{
     font-family: sans-serif;
     font-weight: 600;
     background-color:#fff;
-    border: 2px inset #ccc;
+    border: 2px outset #ccc;
 }
 .user-input .btn{
     display: inline-block;
@@ -154,6 +190,16 @@ main{
     background-color: green;
     border: 3px inset #ccc;
     border-radius: 2px;
+    animation: push 6s infinite;
+}
+/* Button Animation */
+@keyframes push{
+    from, 32%{
+        border: 3px outset #ccc;
+    }
+    33%, to{
+        border: 3px inset #ccc;
+    }
 }
 .user-input .pointer{
     position: absolute;
