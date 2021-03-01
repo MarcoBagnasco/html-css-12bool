@@ -19,6 +19,7 @@ h1{
 /* SITE MAIN */
 main{
     padding: 70px;
+    padding-bottom: 25px;
     background-color: rgba(255, 255, 255, .2);
 }
 
@@ -238,4 +239,13 @@ main{
 }
 .ship-icon.ship-tail{
     border-radius: 0 50% 50% 0;
+}
+
+/* SITE FOOTER */
+footer{
+    padding-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px black;
+    background-color: rgba(255, 255, 255, .2);
 }
